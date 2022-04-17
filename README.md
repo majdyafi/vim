@@ -12,11 +12,12 @@ source  ~/.vim/modules/plugins.vim
 source  ~/.vim/modules/settings.vim
 ```
 
-see screenshots
+## screenshots:
+
 ![vim1](https://github.com/majdyafi/vim/blob/main/Screenshot%202022-04-18%20at%2000.00.15.png?raw=true)
 
+![vim4](https://github.com/majdyafi/vim/blob/main/Screenshot%202022-04-18%20at%2000.07.36.png?raw=true)
 
 ![vim2](https://github.com/majdyafi/vim/blob/main/Screenshot%202022-04-18%20at%2000.01.02.png?raw=true)
-
 
 ![vim3](https://github.com/majdyafi/vim/blob/main/Screenshot%202022-04-18%20at%2000.01.13.png?raw=true)
