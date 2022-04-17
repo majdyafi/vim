@@ -1,7 +1,7 @@
 # vim
 
 
-These are the three modules that I merely use to cutomise vim. The ~/.vimrc file sources these files. 
+These are the three modules that I merely use to cutomise vim to write C# core (using LSP). I have tested this setup on a Mac but haven't had the chance to test it on Windows or Linux.
 
 ## Installation
 
