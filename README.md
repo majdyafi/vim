@@ -15,6 +15,43 @@ source  ~/.vim/modules/keymaps.vim
 source  ~/.vim/modules/plugins.vim
 source  ~/.vim/modules/settings.vim
 ```
+then run `:PlugInstall` or use your favourite plugin installer.
+
+## Plugins
+
+- 'mhinz/vim-startify'
+- 'prabirshrestha/vim-lsp'
+- 'haya14busa/incsearch.vim'
+- 'junegunn/vim-peekaboo'
+- 'AnotherProksY/ez-window'
+- 'airblade/vim-gitgutter'
+- 'preservim/nerdcommenter'
+- 'gko/vim-coloresque'
+- 'mattn/emmet-vim'
+- 'mileszs/ack.vim'
+- 'jlcrochet/vim-razor'
+- 'rmagatti/goto-preview'
+- '907th/vim-auto-save'
+- 'rhysd/clever-f.vim'
+- 'itchyny/vim-cursorword'
+- 'dense-analysis/ale'
+- 'preservim/nerdtree'
+- 'jlanzarotta/bufexplorer'
+- 'puremourning/vimspector'
+- 'maximbaz/lightline-ale'
+- 'shinchu/lightlinegruvbox.vim'
+- 'itchyny/lightline.vim'
+- 'Rigellute/rigel'
+- 'vim-airline/vim-airline'
+- 'junegunn/fzf.vim'
+- 'junegunn/fzf'
+- 'dense-analysis/ale'
+- 'nickspoons/vim-sharpenup'
+- 'prabirshrestha/asyncomplete.vim'
+- 'OmniSharp/omnisharp-vim'
+- 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
+- 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 
 ## Screenshots:
 
