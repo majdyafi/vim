@@ -31,6 +31,17 @@ set encoding=utf-8
 set fileencoding=utf-8
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
+"change cursor style on insert mode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+" reset the cursor on start (for older versions of vim, usually not required)
+augroup myCmds
+au!
+autocmd VimEnter * silent !echo -ne "\e[2 q"
+augroup END
+
+
 "ALE support for OmniSharp
 let g:ale_linters = {
 \ 'cs': ['OmniSharp']
