@@ -6,8 +6,7 @@ nnoremap <leader>vc :source ~/.vimrc<CR>
 "Navigation 
 nnoremap <leader>ff :Files<CR>
 "NerdTree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-n> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
