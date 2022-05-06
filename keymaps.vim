@@ -6,12 +6,15 @@ nnoremap <leader>vc :source ~/.vimrc<CR>
 "Navigation 
 nnoremap <leader>ff :Files<CR>
 "NerdTree
-nnoremap <C-n> :NERDTreeFocus<CR>
+"nnoremap <C-n> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 "editing
 nnoremap <leader>, :wa<CR>:nohl<CR>
+nnoremap <C-j> 3j
+nnoremap <C-k> 3k
+
 
 let g:ez_terminal_key = '<leader>to'   " or any key you want
 
@@ -28,6 +31,8 @@ nnoremap <Leader>aj :ALENext<CR>
 nnoremap <Leader>ak :ALEPrevious<CR>
 
 "Omnisharp
+
+autocmd FileType cs nnoremap <Leader>dr :call system('dotnet run')
 
 augroup omnisharp_commands
   autocmd!
@@ -66,8 +71,14 @@ augroup omnisharp_commands
 
   autocmd FileType cs nmap <silent> <buffer> <Leader>nm <Plug>(omnisharp_rename)
 
-  autocmd FileType cs nmap <silent> <buffer> <Leader>re <Plug>(omnisharp_restart_server)
-  autocmd FileType cs nmap <silent> <buffer> <Leader>st <Plug>(omnisharp_start_server)
-  autocmd FileType cs nmap <silent> <buffer> <Leader>sp <Plug>(omnisharp_stop_server)
+  autocmd FileType cs nmap  <buffer> <Leader>re <Plug>(omnisharp_restart_server)
+  autocmd FileType cs nmap  <buffer> <Leader>st <Plug>(omnisharp_start_server)
+  autocmd FileType cs nmap  <buffer> <Leader>sp <Plug>(omnisharp_stop_server)
+
 augroup END
+
+	let g:OmniSharp_popup_mappings = {
+\ 'sigNext': '<C-j>',
+\ 'sigPrev': '<C-k>',
+\}
 

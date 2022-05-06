@@ -29,7 +29,26 @@ set backspace=indent,eol,start
 set noswapfile
 set encoding=utf-8
 set fileencoding=utf-8
+scriptencoding utf-8
 let g:auto_save = 1  " enable AutoSave on Vim startup
+
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+"use 4 spaces for tabs
+set tabstop=2 softtabstop=2 shiftwidth=2
+
+"display indentation guides
+set list listchars=tab:ˈ\ \,trail:·,extends:»,precedes:«,nbsp:×
+
+"convert spaces to tabs when reading file
+autocmd! bufreadpost * set noexpandtab | retab! 4
+
+"convert tabs to spaces before writing file
+autocmd! bufwritepre * set expandtab | retab! 4
+
+"convert spaces to tabs after writing file (to show guides again)
+autocmd! bufwritepost * set noexpandtab | retab! 4
+
 
 "change cursor style on insert mode
 let &t_SI = "\e[6 q"
@@ -54,22 +73,22 @@ let g:ale_linters = { 'cs': ['OmniSharp'] }
 
 
 let g:startify_lists = [
-	  \ { 'type': 'sessions',  'header': ['   Sessions']       },
-	  \ {'header': ['   Files'], 'type': {-> map(s:bookmarks1, '{"line": v:val, "path": v:val}')}},
-	  \ {'header': ['   Folders'], 'type': {-> map(s:bookmarks2, '{"line": v:val, "path": v:val}')}},
-	  \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
-	  \ { 'type': 'files',     'header': ['   Recent Files']            },
-	  \ ]
+  \ { 'type': 'sessions',  'header': [' Sessions']     },
+  \ {'header': [' Files'], 'type': {-> map(s:bookmarks1, '{"line": v:val, "path": v:val}')}},
+  \ {'header': [' Folders'], 'type': {-> map(s:bookmarks2, '{"line": v:val, "path": v:val}')}},
+  \ { 'type': 'dir',   'header': [' Current Directory '. getcwd()] },
+  \ { 'type': 'files',   'header': [' Recent Files']  },
+  \ ]
 
 let s:bookmarks1 = [
-            \ '~/documents/mynotes/planning.md',
-            \ '~/documents/mynotes/scratch.md',
-            \ ]
+  \ '~/documents/mynotes/planning.md',
+  \ '~/documents/mynotes/scratch.md',
+  \ ]
 
 let s:bookmarks2 = [
-            \ '~/documents/mynotes',
-            \ '~/coding/parts',
-            \ ]
+  \ '~/documents/mynotes',
+  \ '~/coding/parts',
+  \ ]
 
 
 let g:ale_linters = {
@@ -80,8 +99,8 @@ let g:ale_linters = {
 let g:asyncomplete_auto_popup = 1
 
 function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~ '\s'
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
 inoremap <silent><expr> <TAB>
@@ -99,12 +118,12 @@ autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
 if executable('pyls')
-    " pip install python-language-server
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'allowlist': ['python'],
-        \ })
+  " pip install python-language-server
+  au User lsp_setup call lsp#register_server({
+  \ 'name': 'pyls',
+  \ 'cmd': {server_info->['pyls']},
+  \ 'allowlist': ['python'],
+  \ })
 endif
 
 
@@ -115,5 +134,4 @@ colorscheme rigel
 let g:rigel_lightline = 1
 let g:lightline = { 'colorscheme': 'rigel' }
 
-"change pop up menu color
-highlight Pmenu ctermbg=black guibg=30 ctermfg=120
+

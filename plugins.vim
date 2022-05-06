@@ -8,7 +8,6 @@ Plug 'OmniSharp/omnisharp-vim'
 "auto complete works with omnisharp
 Plug 'prabirshrestha/asyncomplete.vim'
 
-
 " Mappings, code-actions available flag and statusline integration
 Plug 'nickspoons/vim-sharpenup'
 
@@ -18,6 +17,15 @@ Plug 'dense-analysis/ale'
 " Vim FZF integration, used as OmniSharp selector
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+
+"send text to another window " supports visual mode
+Plug 'karoliskoncevicius/vim-sendtowindow'
+
+"send text to interactive shell
+Plug 'https://github.com/vim-scripts/Conque-Shell'
+
+"smooth scroll
+Plug 'psliwka/vim-smoothie'
 
 "Airline
 Plug 'vim-airline/vim-airline'
