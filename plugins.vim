@@ -21,9 +21,6 @@ Plug 'junegunn/fzf.vim'
 "send text to another window " supports visual mode
 Plug 'karoliskoncevicius/vim-sendtowindow'
 
-"send text to interactive shell
-Plug 'https://github.com/vim-scripts/Conque-Shell'
-
 "smooth scroll
 Plug 'psliwka/vim-smoothie'
 
