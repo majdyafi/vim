@@ -15,14 +15,15 @@ nnoremap <leader>, :wa<CR>:nohl<CR>
 nnoremap <C-j> 3j
 nnoremap <C-k> 3k
 
-
-let g:ez_terminal_key = '<leader>to'   " or any key you want
+"execute the line under curson in termial
+nnoremap <leader>te :execute getline('.')<CR>
+xnoremap silent <leader>te :w !bash<CR>
 
 "asynccomplete
 "using tab for autocomplete
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+inoremap <expr> <cr>  pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 "force referesh comletion 
 imap <c-space> <Plug>(asyncomplete_force_refresh)
 
@@ -77,7 +78,7 @@ augroup omnisharp_commands
 
 augroup END
 
-	let g:OmniSharp_popup_mappings = {
+  let g:OmniSharp_popup_mappings = {
 \ 'sigNext': '<C-j>',
 \ 'sigPrev': '<C-k>',
 \}
