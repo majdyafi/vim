@@ -19,10 +19,10 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 "send text to another window " supports visual mode
-Plug 'karoliskoncevicius/vim-sendtowindow'
+"Plug 'karoliskoncevicius/vim-sendtowindow'
 
 "smooth scroll
-Plug 'psliwka/vim-smoothie'
+"Plug 'psliwka/vim-smoothie'
 
 "Airline
 Plug 'vim-airline/vim-airline'
@@ -53,7 +53,7 @@ Plug 'itchyny/vim-cursorword'
 "Plug 'rhysd/clever-f.vim'
 
 "auto save as I type
-Plug '907th/vim-auto-save'
+"Plug '907th/vim-auto-save'
 
 
 "let g:deoplete#enable_at_startup = 1

@@ -11,13 +11,21 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 "editing
-nnoremap <leader>, :wa<CR>:nohl<CR>
+nnoremap <leader>, :nohl<CR>
+nnoremap <leader>s :wa<CR>
+nnoremap <Space> :nohl<CR>
+
+
 nnoremap <C-j> 3j
 nnoremap <C-k> 3k
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
 
+"open a termial window
+nnoremap <leader>tt :vert term<CR>
 "execute the line under curson in termial
 nnoremap <leader>te :execute getline('.')<CR>
-xnoremap silent <leader>te :w !bash<CR>
+xnoremap <leader>te :w !bash<CR>
 
 "asynccomplete
 "using tab for autocomplete

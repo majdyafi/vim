@@ -5,7 +5,12 @@ These are the three modules that I merely use to cutomise vim to write C# core (
 
 ## Installation
 
-if you want to use these settings, simply clone this repository to `~/.vim/modules` and add the following lines to `~/.vimrc`
+If you want to use these settings, simply clone this repository to `~/.vim/modules` and add the following lines to `~/.vimrc`
+
+If you don't have vim installed with Python support, run the following command
+
+`brew install vim -python3`
+`brew link vim`
 
 ```
 filetype on
