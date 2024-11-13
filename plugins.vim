@@ -1,7 +1,19 @@
 call plug#begin()
 
+" Install nerdtree icons
+" also needs to install these fonts *Nerd Fonts*
+" https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#font-installation
+" for icons to work
+Plug 'ryanoasis/vim-devicons'
+
+" github copilot
+Plug 'github/copilot.vim'
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
+
+" Install LSPs directly in Vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'OmniSharp/omnisharp-vim'
 
@@ -18,6 +30,9 @@ Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+"display tab number
+Plug 'mkitt/tabline.vim'
+
 "send text to another window " supports visual mode
 "Plug 'karoliskoncevicius/vim-sendtowindow'
 
@@ -27,15 +42,6 @@ Plug 'junegunn/fzf.vim'
 "Airline
 Plug 'vim-airline/vim-airline'
 
-" Colorscheme
-Plug 'Rigellute/rigel'
-
-
-" Statusline
-"Plug 'itchyny/lightline.vim'
-"Plug 'shinchu/lightlinegruvbox.vim'
-"Plug 'maximbaz/lightline-ale'
-"Plug 'puremourning/vimspector'
 
 "BufExplorer
 Plug 'jlanzarotta/bufexplorer'
@@ -48,12 +54,6 @@ Plug 'dense-analysis/ale'
 
 " Hilight the word under cursor.
 Plug 'itchyny/vim-cursorword'
-
-"replace built-in f to find the next occurance of a character.
-"Plug 'rhysd/clever-f.vim'
-
-"auto save as I type
-"Plug '907th/vim-auto-save'
 
 
 "let g:deoplete#enable_at_startup = 1
@@ -90,7 +90,8 @@ Plug 'gko/vim-coloresque'
 Plug 'preservim/nerdcommenter'
 
 "show git signs in the editor 
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter' replaced with below
+Plug 'tpope/vim-fugitive'
 
 "Plug 'AnotherProksY/ez-window'
 "" Change default 'Window Resize' mode mapping:
@@ -104,10 +105,14 @@ Plug 'junegunn/vim-peekaboo'
 
 Plug 'haya14busa/incsearch.vim'
 
-" language server protocol LSP
-Plug 'prabirshrestha/vim-lsp'
+" language server protocol - LSP replaced by CoC
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'mattn/vim-lsp-settings'
 
 
 
 Plug 'mhinz/vim-startify'
+
+" colour theme
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 call plug#end()

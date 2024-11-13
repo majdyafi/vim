@@ -5,32 +5,37 @@ nnoremap <leader>vc :source ~/.vimrc<CR>
 
 "Navigation 
 nnoremap <leader>ff :Files<CR>
+" search all files with AG
+nnoremap <leader>fs :Ag<CR>
 "NerdTree
 "nnoremap <C-n> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 "editing
-nnoremap <leader>, :nohl<CR>
-nnoremap <leader>s :wa<CR>
-nnoremap <Space> :nohl<CR>
+nnoremap <leader>, :wa<CR>
+nnoremap <leader><Space> :nohl<CR>
 
 
 nnoremap <C-j> 3j
 nnoremap <C-k> 3k
 nnoremap <C-e> 5<C-e>
 nnoremap <C-y> 5<C-y>
+"close window
+nnoremap <C-q> :q<CR>
 
 "open a termial window
-nnoremap <leader>tt :vert term<CR>
+ nnoremap <leader>tt :vert term<CR>
+"nnoremap <leader>tt :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
+
 "execute the line under curson in termial
 nnoremap <leader>te :execute getline('.')<CR>
 xnoremap <leader>te :w !bash<CR>
 
 "asynccomplete
 "using tab for autocomplete
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>  pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 "force referesh comletion 
 imap <c-space> <Plug>(asyncomplete_force_refresh)
@@ -91,3 +96,7 @@ augroup END
 \ 'sigPrev': '<C-k>',
 \}
 
+" Use :CocDiagnostics to show diagnostics in location list
+nmap <silent> <leader>d :CocDiagnostics<CR>
+" Toggle location list
+nmap <silent> <leader>l :lopen<CR>
