@@ -44,6 +44,18 @@ imap <c-space> <Plug>(asyncomplete_force_refresh)
 nnoremap <Leader>aj :ALENext<CR>
 nnoremap <Leader>ak :ALEPrevious<CR>
 
+"tabs
+nnoremap <leader>1 1gt
+nnoremap <leader>2 2gt
+nnoremap <leader>3 3gt
+nnoremap <leader>4 4gt
+nnoremap <leader>5 5gt
+nnoremap <leader>6 6gt
+nnoremap <leader>7 7gt
+nnoremap <leader>8 8gt
+nnoremap <leader>9 9gt
+
+
 "Omnisharp
 
 autocmd FileType cs nnoremap <Leader>dr :call system('dotnet run')
@@ -100,3 +112,8 @@ augroup END
 nmap <silent> <leader>d :CocDiagnostics<CR>
 " Toggle location list
 nmap <silent> <leader>l :lopen<CR>
+
+
+
+" Map the function to a key combination (e.g., <Leader>e in visual mode)
+vnoremap <Leader>r :call ExecuteSelection()<CR>
